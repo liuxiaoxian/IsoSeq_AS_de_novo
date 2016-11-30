@@ -2,7 +2,7 @@
 
 #blast_parser_filter_RF#
 
-Usage="""filter.py INPUT OUTPUT"""
+Usage="""NAME.py INPUT OUTPUT"""
 
 import sys
 
