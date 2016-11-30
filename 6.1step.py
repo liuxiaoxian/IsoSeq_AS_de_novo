@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-Usage="""filter.py INPUT OUTPUT"""
+#blast_parser_filter_AStypeI#
+
+Usage="""NAME.py INPUT OUTPUT"""
 
 import sys
 
