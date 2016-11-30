@@ -2,7 +2,7 @@
 
 #blast_parser_hsp_2_1000bp_SE"
 
-#Usage="""NAME.py INPUT OUTPUT"""#
+Usage="""NAME.py INPUT OUTPUT"""
 
 import sys
 from Bio.Blast import NCBIXML
