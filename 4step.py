@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+#blast_parser_filter_hsp100#
+
 Usage="""filter.py INPUT OUTPUT"""
 
 import sys
