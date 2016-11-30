@@ -1,10 +1,11 @@
-# After the 6.1 step
+# Running commands in this file on the output file from 6.1 step
+# The output "6.1step.clean.sortS.uniqS.sortQ.uniqQ.txt" is the list of AS candidates (alignments)
 
 sed "s/No definition line//g" 6.1step.txt > 6.1step.clean.txt
 
 # sort and remove redundant "Subject"
 
-sort -k 2,2V -k 3,3rn 6.1step.clean.txt > 6.1step.clean.sortS.txt
+sort -k 2,2V -k 3,3rn 6.1step.clean.txt > 6.1step.c.sortS.txt
 awk '{if(! a[$2]){print; a[$2]++}}' 6.1step.clean.sortS.txt > 6.1step.clean.sortS.uniqS.txt
 
 # sort and remove redundant "Query"
