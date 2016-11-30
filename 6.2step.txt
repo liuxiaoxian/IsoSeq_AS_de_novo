@@ -1,14 +1,14 @@
-# Running commands in this file on the output file from 6.1 step
-# The output "6.1step.clean.sortS.uniqS.sortQ.uniqQ.txt" is the list of AS candidates (alignments)
+# Commands in this file are written to process the output from 6.1 step.
+# The output "6.1step.clean.sortS.uniqS.sortQ.uniqQ.txt" is the list of AS candidates (read alignments)
 
 sed "s/No definition line//g" 6.1step.txt > 6.1step.clean.txt
 
-# sort and remove redundant "Subject"
+# sort and remove redundant "Subject read"
 
 sort -k 2,2V -k 3,3rn 6.1step.clean.txt > 6.1step.c.sortS.txt
 awk '{if(! a[$2]){print; a[$2]++}}' 6.1step.clean.sortS.txt > 6.1step.clean.sortS.uniqS.txt
 
-# sort and remove redundant "Query"
+# sort and remove redundant "Query read"
 
 sort -k 1,1V -k 3,3rn 6.1step.clean.sortS.uniqS.txt > 6.1step.clean.sortS.uniqS.sortQ.txt
 awk '{if(! a[$1]){print; a[$1]++}}' 6.1step.clean.sortS.uniqS.sortQ.txt > 6.1step.clean.sortS.uniqS.sortQ.uniqQ.txt
