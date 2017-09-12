@@ -9,16 +9,16 @@ from Bio.Blast import NCBIXML
 
 def identity_query_alignment_obj(alignmentObj,e_value_thresh=1000000):
 
-    this_matches = 0
+	this_matches = 0
 
-    for hsp in alignmentObj.hsps:
-        if hsp.expect <= e_value_thresh:
-            this_query = blast_record.query_length
-            this_matches += hsp.identities
-    if this_matches >0:
-        this_percent =  (this_matches * 100. )/ this_query
+	for hsp in alignmentObj.hsps:
+		if hsp.expect <= e_value_thresh:
+			this_query = blast_record.query_length
+			this_matches += hsp.identities
+	if this_matches >0:
+		this_percent =  (this_matches * 100. )/ this_query
 
-    return this_percent
+	return this_percent
 
 
 inPutFile=sys.argv[1]
@@ -39,7 +39,7 @@ for blast_record in Blast_records:
 	subjectLength = ""
 	queryIdentityPercent = 0
 	for alignment, description in zip(blast_record.alignments,blast_record.descriptions):
-        	hspNum = int(len(alignment.hsps))
+		hspNum = int(len(alignment.hsps))
 		subjectName = alignment.title
 		subjectLength = int(alignment.length)
 		queryIdentityPercent = identity_query_alignment_obj(alignment)
