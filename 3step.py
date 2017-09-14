@@ -29,8 +29,8 @@ for Line in InFile:
 		DiffLen1 = int(ElementList[10])
 		DiffLen2 = int(ElementList[16])
 		if (DiffLen1 < 0 and DiffLen2 < 0) or (DiffLen1 > 0 and DiffLen2 > 0): 
-				if WriteOutFile:
-					OutFile.write(Line + '\n')
+			if WriteOutFile:
+				OutFile.write(Line + '\n')
 	LineNumber += 1
 
 InFile.close()

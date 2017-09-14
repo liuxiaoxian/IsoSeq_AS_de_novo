@@ -18,8 +18,8 @@ HeaderLine = 'QName\tQLength\tSName\tSLength\tQueryIdentityPercent\tHspLength\tQ
 
 
 if WriteOutFile:
-        	OutFile = open(OutFileName, 'w')
-        	OutFile.write(HeaderLine + '\n')
+	OutFile = open(OutFileName, 'w')
+	OutFile.write(HeaderLine + '\n')
         
 LineNumber = 0
 
@@ -45,5 +45,5 @@ for Line in InFile:
 
 InFile.close()
 if WriteOutFile:
-        	OutFile.close()
+	OutFile.close()
 

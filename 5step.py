@@ -31,13 +31,13 @@ for Line in InFile:
 		Qhsp_Start_II = ElementList[5]
 		Qhsp_End_II = ElementList[6]
 		Shsp_Start_I = ElementList[7]
-                Shsp_End_I = ElementList[8]
-                Shsp_Start_II = ElementList[9]
-                Shsp_End_II= ElementList[10]
-
+		Shsp_End_I = ElementList[8]
+		Shsp_Start_II = ElementList[9]
+		Shsp_End_II= ElementList[10]
+		
 		if not (Qhsp_Start_II > Qhsp_Start_I and Qhsp_End_II < Qhsp_End_I) and not (Qhsp_Start_II < Qhsp_Start_I and Qhsp_End_II > Qhsp_End_I):
 			if WriteOutFile:
-                                        OutFile.write(Line + '\n')
+				OutFile.write(Line + '\n')
 
 				
 	LineNumber += 1

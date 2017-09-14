@@ -37,10 +37,10 @@ for Line in InFile:
 		Diff_SLen_I = ElementList[10]
 		Hsp_Length_II = int(ElementList[11])
 		Qhsp_Start_II = ElementList[12]
-                Qhsp_End_II = ElementList[13]
-                Shsp_Start_II = ElementList[14]
-                Shsp_End_II= ElementList[15]
-                Diff_SLen_II = ElementList[16]
+		Qhsp_End_II = ElementList[13]
+		Shsp_Start_II = ElementList[14]
+		Shsp_End_II= ElementList[15]
+		Diff_SLen_II = ElementList[16]
 		if QIdentity >= 95 and QIdentity <=100.5:
 			if Hsp_Length_I >=100 and Hsp_Length_II >= 100:
 				outList = [str(QName),str(SName),str(QIdentity),str(Qhsp_Start_I),str(Qhsp_End_I),str(Qhsp_Start_II),str(Qhsp_End_II),str(Shsp_Start_I),str(Shsp_End_I),str(Shsp_Start_II),str(Shsp_End_II)]

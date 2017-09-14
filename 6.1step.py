@@ -31,9 +31,9 @@ for Line in InFile:
 		Qhsp_Start_II = ElementList[5]
 		Qhsp_End_II = ElementList[6]
 		Shsp_Start_I = ElementList[7]
-                Shsp_End_I = ElementList[8]
-                Shsp_Start_II = ElementList[9]
-                Shsp_End_II= ElementList[10]
+		Shsp_End_I = ElementList[8]
+		Shsp_Start_II = ElementList[9]
+		Shsp_End_II= ElementList[10]
 		
 		GapQueryI = abs(int(Qhsp_End_I) - int(Qhsp_Start_II))
 		GapQueryII =abs(int(Qhsp_Start_I) - int(Qhsp_End_II))
@@ -43,7 +43,7 @@ for Line in InFile:
 		
 		if (GapQueryI <= 5 and GapSbjctI >= 100) or (GapQueryII <=5 and GapSbjctII >= 100):
 			if WriteOutFile:
-                                        OutFile.write(Line + '\n')
+				OutFile.write(Line + '\n')
 
 				
 	LineNumber += 1
